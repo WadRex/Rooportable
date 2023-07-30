@@ -6,7 +6,7 @@ This project is a portable adaptation of [Roop](https://github.com/s0md3v/roop),
 
 The project aligns with the version of [Roop](https://github.com/s0md3v/roop) at commit [43a8d9f7f371d083852183ea752ef8cdd944dab3](https://github.com/s0md3v/roop/commit/43a8d9f7f371d083852183ea752ef8cdd944dab3). Any significant feature updates or crucial bug fixes in the original repository will prompt an update to this project as well.
 
-The only thing that I've changed from the original repo is the removal of the NSFW filter, as it produced a lot of false positives, even on fully SFW images.
+The only thing that I've changed from the original repo is the removal of the NSFW filter, as it produced a lot of false positives, even on fully SFW videos and images.
 
 # Installing
 1. Clone this repository or download the .zip file.
@@ -19,4 +19,5 @@ The only thing that I've changed from the original repo is the removal of the NS
 This project, being a derivative of [Roop](https://github.com/s0md3v/roop), adheres to the same license terms. Besides, the software downloads and utilises two additional programs:
 1. Miniconda
 2. Microsoft Visual C++ Redistributable Package
+
 Ensure you read and understand the licenses associated with these software. No additional licensing has been incorporated to this repository. You have the freedom to use and modify this software as per your needs, provided you respect the terms of the original licenses. While credit attribution to me is not a necessity, it is highly appreciated.
