@@ -49,7 +49,8 @@ if not exist "%USERPROFILE%\.insightface" (
 
 mklink /D "%USERPROFILE%\.insightface\models\buffalo_l" "%~dp0Roop\models\buffalo_l"
 
-python .\Roop\run.py --execution-provider "%provider%" --keep-fps --many-faces
+cd Roop
+python .\run.py --execution-provider "%provider%" --keep-fps --many-faces
 
 rmdir "%USERPROFILE%\.insightface\models\buffalo_l"
 rd /s /q "%USERPROFILE%\.insightface"
