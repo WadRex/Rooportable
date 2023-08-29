@@ -100,6 +100,8 @@ mkdir ".\Roop\models\buffalo_l"
 tar -xf ".\Temporary Files\buffalo_l.zip" -C ".\Roop\models\buffalo_l"
 rd /s /q ".\Temporary Files"
 
+bitsadmin /transfer "Download 'inswapper' Model" /download /priority normal "https://github.com/WadRex/Rooportable/releases/download/inswapper_128.onnx/inswapper_128.onnx" "%~dp0\Roop\models\inswapper_128.onnx"
+
 cls
 title "Full Install & Reinstall - Completed"
 mode con:cols=71 lines=9
