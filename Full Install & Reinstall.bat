@@ -55,17 +55,17 @@ echo y | .\Miniconda\Scripts\conda.exe install ffmpeg==6.0.0 -c conda-forge
 echo y | .\Miniconda\Scripts\conda.exe install cudatoolkit==11.8.0 -c conda-forge
 
 git clone https://github.com/s0md3v/roop.git Roop
-git -C Roop checkout 43a8d9f7f371d083852183ea752ef8cdd944dab3
+git -C Roop checkout da1ef285f1d43bd0cc8b9cdb9a0f80f7ae793a97
 
 if exist ".\Roop\roop\core_temporary.py" del /f /q ".\Roop\roop\core_temporary.py"
 for /f "delims=: tokens=1,*" %%a in ('findstr /n .* ".\Roop\roop\core.py"') do (
-    if "%%a"=="141" (
+    if "%%a"=="137" (
         echo.#%%b >>".\Roop\roop\core_temporary.py"
-    ) else if "%%a"=="142" (
+    ) else if "%%a"=="138" (
         echo.#%%b >>".\Roop\roop\core_temporary.py"
-    ) else if "%%a"=="156" (
+    ) else if "%%a"=="152" (
         echo.#%%b >>".\Roop\roop\core_temporary.py"
-    ) else if "%%a"=="157" (
+    ) else if "%%a"=="153" (
         echo.#%%b >>".\Roop\roop\core_temporary.py"
     ) else (
         echo.%%b >>".\Roop\roop\core_temporary.py"
