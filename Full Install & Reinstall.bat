@@ -102,6 +102,8 @@ rd /s /q ".\Temporary Files"
 
 bitsadmin /transfer "Download 'inswapper' Model" /download /priority normal "https://github.com/WadRex/Rooportable/releases/download/inswapper_128.onnx/inswapper_128.onnx" "%~dp0\Roop\models\inswapper_128.onnx"
 
+bitsadmin /transfer "Download 'GFPGAN' Model" /download /priority normal "https://github.com/WadRex/Rooportable/releases/download/GFPGANv1.4.pth/GFPGANv1.4.pth" "%~dp0\Roop\models\GFPGANv1.4.pth"
+
 cls
 title "Full Install & Reinstall - Completed"
 mode con:cols=71 lines=9

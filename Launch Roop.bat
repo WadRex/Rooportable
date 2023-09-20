@@ -40,6 +40,24 @@ if /i "%choice%"=="1" (
     goto device_selection
 )
 
+:processor_selection
+cls
+echo POSSIBLE FRAME PROCESSORS:
+echo 1. FACE SWAPPER (TAKES 'SOURCE' AND 'TARGET' AS AN INPUT)
+echo 2. FACE ENHANCER (TAKES 'TARGET' AS AN INPUT)
+set /p "choice=SELECT FRAME PROCESSOR BY TYPING '1' or '2': "
+if /i "%choice%"=="1" (
+    set "processor=face_swapper"
+    cls    
+    echo YOU SELECTED "FACE SWAPPER"
+) else if /i "%choice%"=="2" (
+    set "processor=face_enhancer"
+    cls
+    echo YOU SELECTED "FACE ENHANCER"
+) else (
+    goto processor_selection
+)
+
 if not exist "%USERPROFILE%\.insightface" (
   mkdir "%USERPROFILE%\.insightface\models"
 ) else (  
@@ -50,7 +68,7 @@ if not exist "%USERPROFILE%\.insightface" (
 mklink /D "%USERPROFILE%\.insightface\models\buffalo_l" "%~dp0Roop\models\buffalo_l"
 
 cd Roop
-python .\run.py --execution-provider "%provider%" --keep-fps --many-faces
+python .\run.py --execution-provider "%provider%" --keep-fps --many-faces --frame-processor "%processor%"
 
 rmdir "%USERPROFILE%\.insightface\models\buffalo_l"
 rd /s /q "%USERPROFILE%\.insightface"
